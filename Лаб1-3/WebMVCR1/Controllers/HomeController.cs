@@ -12,14 +12,14 @@ namespace WebMVCR1.Controllers
     {
         private static PersonRepository db = new PersonRepository();
         // GET: Home
-        public ActionResult Index()
-        {
-            //Lab3_1-------------------------------------------------------------------
-            int hour = DateTime.Now.Hour;
-            ViewBag.Greeting = hour < 12 ? "Доброе утро" : "Добрый день";
-            ViewData["Mes"] = "хорошего настроения";
-            return View();
-        }
+        //public ActionResult Index()
+        //{
+        //    //Lab3_1-------------------------------------------------------------------
+        //    int hour = DateTime.Now.Hour;
+        //    ViewBag.Greeting = hour < 12 ? "Доброе утро" : "Добрый день";
+        //    ViewData["Mes"] = "хорошего настроения";
+        //    return View();
+        //}
 
         [HttpGet]
         public ViewResult InputData()
@@ -41,8 +41,8 @@ namespace WebMVCR1.Controllers
             return View("ListPerson");
         }
 
-        //public string Index(string hel)
-        //{
+        public string Index(string hel)
+        {
         //Lab1_1-------------------------------------------------------------------
         //int hour = DateTime.Now.Hour;
         //string Greeting = hour < 12 ? "Доброе утро" : "Добрый день";
@@ -56,14 +56,12 @@ namespace WebMVCR1.Controllers
         //return Greeting;
         //Lab2_1-------------------------------------------------------------------
         //string res = ExeEnum();
-        //return res;
         //Lab2_1-------------------------------------------------------------------
         //string res = ExeStruct();
-        //return res;
         //Lab2_2-------------------------------------------------------------------
         //string res = StudyCsharp.SetStatus(3);
         //Lab2_2-------------------------------------------------------------------
-        //string res = StudyCsharp.ExeSwitch(StudyCsharp.SetStatus(3));
+        string res = StudyCsharp.ExeSwitch(StudyCsharp.SetStatus(3));
         //Lab2_2-------------------------------------------------------------------
         //string res = StudyCsharp.GetFunction(0, 9);
         //Lab2_2-------------------------------------------------------------------
@@ -76,9 +74,8 @@ namespace WebMVCR1.Controllers
         //string res = ExePolim();
         //Lab2_5-------------------------------------------------------------------
         //string res = ExeCollection();
-
-        //return res;
-        //}
+        return res;
+        }
 
         public string ExeCollection()
         {
